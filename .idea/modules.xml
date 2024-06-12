@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/QuarkusConsumerClientApi.iml" filepath="$PROJECT_DIR$/.idea/QuarkusConsumerClientApi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/quotation/quotation.iml" filepath="$PROJECT_DIR$/quotation/quotation.iml" />
     </modules>
   </component>
 </project>
