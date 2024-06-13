@@ -8,6 +8,7 @@ import jakarta.ws.rs.PathParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+
 @Path("/last")
 @RestClient
 @RegisterRestClient
