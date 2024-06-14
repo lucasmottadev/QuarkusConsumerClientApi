@@ -8,11 +8,10 @@ import jakarta.ws.rs.PathParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-
 @Path("/last")
 @RestClient
-@RegisterRestClient
 @ApplicationScoped
+@RegisterRestClient(baseUri = "https://economia.awesomeapi.com.br")
 public interface CurrencyPriceClient {
 
     @GET
