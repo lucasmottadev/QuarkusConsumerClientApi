@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+
+    // QUARKUS
+    implementation ("io.quarkus:quarkus-arc")
+    implementation ("io.quarkus:quarkus-rest")
+    implementation("io.quarkus:quarkus-rest-client-jackson")
+    implementation("io.quarkus:quarkus-scheduler")
+    implementation("org.eclipse.microprofile.reactive.messaging:microprofile-reactive-messaging-api:3.0")
+    implementation 'jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0'
+    // DATABASE
+    implementation("io.quarkus:quarkus-hibernate-orm-panache")
+    implementation("io.quarkus:quarkus-jdbc-postgresql")
+
+    // LOMBOK
+    compileOnly "org.projectlombok:lombok:1.18.22"
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+
+    // TEST
+    testImplementation "io.rest-assured:rest-assured"
+    testImplementation "io.quarkus:quarkus-junit5"
+    testCompileOnly "org.projectlombok:lombok:1.18.22"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.22"
+}
+
+group "com.lucasmottadev"
+version "1.0-SNAPSHOT"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
+}
+compileJava {
+    options.encoding = "UTF-8"
+    options.compilerArgs << "-parameters"
+}
+
+compileTestJava {
+    options.encoding = "UTF-8"
+}

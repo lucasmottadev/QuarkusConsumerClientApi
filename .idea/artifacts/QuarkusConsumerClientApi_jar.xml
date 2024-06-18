@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="QuarkusConsumerClientApi:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/QuarkusConsumerClientApi_jar</output-path>
-    <root id="archive" name="QuarkusConsumerClientApi.jar" />
-  </artifact>
-</component>
